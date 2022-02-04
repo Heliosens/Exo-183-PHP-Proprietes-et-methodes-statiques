@@ -17,3 +17,21 @@
  *
  * 5. Invoquez la méthode vous permettant de récupérer le nombre total d'abonnements aux plateformes VOD de manière à afficher le nombre total d'abonnements.
  */
+
+require __DIR__ . '/VOD.php';
+
+$netflix = new VOD();
+$prime = new VOD();
+
+$netflix->addAbo();
+$netflix->addAbo();
+$netflix->addAbo();
+$netflix->addAbo();
+
+$prime->addAbo();
+$prime->addAbo();
+$prime->addAbo();
+$prime->addAbo();
+$prime->addAbo();
+
+echo "nombre total d'abonnement : " . $netflix->getTotalAbo();
